@@ -1,8 +1,20 @@
-let num = 100;
+let input = ["12"];
+
+let print = this.print || console.log;
+let gets =
+  this.gets ||
+  (
+    (arr, index) => () =>
+      arr[index++]
+  )(input, 0);
+
+//-----------------------------
+
+let num = +gets();
 let result = [];
 
-for(let i= 2; i <= num; i++) {
-  if(isPrime(i)) {
+for (let i = 2; i <= num; i++) {
+  if (isPrime(i)) {
     while (true) {
       if (num % i !== 0) {
         break;

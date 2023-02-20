@@ -1,24 +1,22 @@
-const n = +"99";
-const k = +"1";
+let input = ["5", "2", "6", "5", "8", "3"];
 
-let result = 1;
+let print = this.print || console.log;
+let gets =
+  this.gets ||
+  (
+    (arr, index) => () =>
+      arr[index++]
+  )(input, 0);
+
+//-----------------------------
+
+const n = BigInt(Number(gets()));
+const k = BigInt(Number(gets()));
+
+let result = 1n;
 
 for (let i = n; i > k; i--) {
-  if(!isOverflow(result, i)) {
-    result *= i;
-  } else {
-    result = Infinity;
-    break;
-  }
+  result *= i;
 }
 
 console.log(result);
-
-function isOverflow(a, b) {
-  if (a == 0 || b == 0) return false;
-
-  let result = a * b;
-  if (result >= 9223372036854775807 || result <= -9223372036854775808) result = 0;
-  if (a == parseInt(result / b)) return false;
-  else return true;
-}

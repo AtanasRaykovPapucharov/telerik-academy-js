@@ -1,23 +1,34 @@
-const n = 6;
-const arr = ["1", "me", "2", "3", "pot", "jjj"];
+let input = ["5", "1", "go", "1", "there", "5"];
+
+let print = this.print || console.log;
+let gets =
+  this.gets ||
+  (
+    (arr, index) => () =>
+      arr[index++]
+  )(input, 0);
+
+//-----------------------------
+
+const n = +gets();
 
 let textResult = "";
 let numberResult = 0;
 let current;
 
 for (let i = 0; i < n; i++) {
-    current = arr[i]
+  current = gets();
 
-    if(isNaN(current)) {
-        textResult += `-${current}`;
-    } else {
-        numberResult += +current
-    }
+  if (isNaN(current)) {
+    textResult += `-${current}`;
+  } else {
+    numberResult += +current;
+  }
 }
 
 if (textResult === "") {
-  console.log("no words");
+  print("no words");
 } else {
-  console.log(textResult.replace("-", ""));
+  print(textResult.replace("-", ""));
 }
-console.log(numberResult);
+print(numberResult);
