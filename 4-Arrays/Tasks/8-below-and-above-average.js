@@ -1,8 +1,14 @@
-let print = this.print || console.log;
+let input = ["3,-12,0,0,13,5,1,0,-2"];
 
-// Use gets() to receive one line of input (the input line is always a string)
-// Use "print" instead of "console.log" to print the result
-// Additional info here: https://learn.telerikacademy.com/course/view.php?id=36&section=5
+let print = this.print || console.log;
+let gets =
+  this.gets ||
+  (
+    (arr, index) => () =>
+      arr[index++]
+  )(input, 0);
+
+//-----------------------------
 
 const numbers = gets().split(",");
 const count = numbers.length;
