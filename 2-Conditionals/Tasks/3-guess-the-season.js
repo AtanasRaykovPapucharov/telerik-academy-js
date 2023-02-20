@@ -1,5 +1,17 @@
-const month = "June" // gets()
-const date = Number("24")
+let input = ["April", "6"];
+
+let print = this.print || console.log;
+let gets =
+  this.gets ||
+  (
+    (arr, index) => () =>
+      arr[index++]
+  )(input, 0);
+
+//-----------------------------
+
+const month = gets();
+const date = Number(gets());
 
 if (
   // Spring
@@ -8,7 +20,7 @@ if (
   (month === "March" && date >= 20) ||
   (month === "June" && date < 21)
 ) {
-  console.log("Spring");
+  print("Spring");
 } else if (
   // Summer
   month === "July" ||
@@ -16,7 +28,7 @@ if (
   (month === "September" && date < 22) ||
   (month === "June" && date >= 21)
 ) {
-  console.log("Summer");
+  print("Summer");
 } else if (
   // Autumn
   month === "October" ||
@@ -24,7 +36,7 @@ if (
   (month === "September" && date >= 22) ||
   (month === "December" && date < 21)
 ) {
-  console.log("Autumn");
+  print("Autumn");
 } else if (
   // Winter
   month === "January" ||
@@ -32,5 +44,5 @@ if (
   (month === "March" && date < 20) ||
   (month === "December" && date >= 21)
 ) {
-  console.log("Winter");
+  print("Winter");
 }
