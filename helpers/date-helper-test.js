@@ -1,9 +1,9 @@
-const addToDate = require("./date-helper").addToDate;
-const removeFromDate = require("./date-helper").removeFromDate;
+const { addToDate, removeFromDate } = require("./date-helper");
 
-console.log("---------------");
-console.log("Date Helper Tests");
-console.log("---------------");
+const testTitle = "Date Helper Tests";
+console.log("-".repeat(testTitle.length));
+console.log(testTitle);
+console.log("-".repeat(testTitle.length));
 
 (() => {
   console.log("Testing 'addToDate' function with input 'date: Date' and 'num: number");

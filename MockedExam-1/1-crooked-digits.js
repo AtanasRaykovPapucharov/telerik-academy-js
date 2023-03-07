@@ -12,8 +12,8 @@ let gets =
 
 let numString = gets().replace(".", "").replace("-", "");
 while(true) {
-    if(numString.length < 2) break;
-    numString = digitsSum(numString);
+  if(numString.length < 2) break;
+  numString = digitsSum(numString);
 }
 print(numString);
 

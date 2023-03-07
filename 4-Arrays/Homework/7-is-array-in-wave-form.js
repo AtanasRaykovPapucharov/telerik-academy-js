@@ -12,13 +12,15 @@ let gets =
 
 const numbers = gets().split(" ").map(Number);
 
-if (numbers.length < 3 || !isWaveArray(numbers)) {
+if (!isWaveArray(numbers)) {
   print("no");
 } else {
   print("yes");
 }
 
 function isWaveArray(arr) {
+  if (arr.length < 3) return false;
+
   let a, b, c;
 
   for (let i = 1; i < arr.length - 1; i++) {

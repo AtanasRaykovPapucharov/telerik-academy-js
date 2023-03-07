@@ -1,12 +1,15 @@
-const removeFirstChar = require("./string-helper").removeFirstChar;
-const reverseString = require("./string-helper").reverseString;
-const sortString = require("./string-helper").sortString;
-const vowelsCount = require("./string-helper").vowelsCount;
-const longestEqualsCount = require("./string-helper").longestEqualsCount;
+const {
+  longestEqualsCount,
+  removeFirstChar,
+  reverseString,
+  sortString,
+  vowelsCount,
+} = require("./string-helper");
 
-console.log("---------------");
-console.log("String Helper Tests");
-console.log("---------------");
+const testTitle = "String Helper Tests";
+console.log("-".repeat(testTitle.length));
+console.log(testTitle);
+console.log("-".repeat(testTitle.length));
 
 (() => {
   console.log(

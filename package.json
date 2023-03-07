@@ -4,7 +4,7 @@
   "description": "JS Prep.",
   "main": "index.js",
   "scripts": {
-    "test": "cd ./helpers & node string-helper-test.js & node date-helper-test.js"
+    "test": "cd ./helpers & node string-helper-test.js & node array-helper-test & node date-helper-test.js"
   },
   "repository": {
     "type": "git",

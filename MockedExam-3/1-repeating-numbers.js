@@ -9,7 +9,7 @@ let gets =
   )(input, 0);
 
 //------------------------------
-
+// let obj = {}
 const numsCounter = {
   1: 0,
   2: 0,
